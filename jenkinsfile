@@ -2,13 +2,13 @@ pipeline {
 	agent any
 	environment {
 		DOCKERHUB_CRED=credentials('dockerhub')
-		IMAGE_NAME="<docker_hub_username>/<docker_hub_repo_name>"
+		IMAGE_NAME="ateeq10/my_webapp"
 	}
 	
 	stages {
 		stage('checkout') {
 			steps {
-				git url:'', branch:'main' 
+				git url:'https://github.com/mdatiq321/my_webapp.git', branch:'main' 
 			}
 		}
 		
